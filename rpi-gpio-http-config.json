@@ -1,0 +1,49 @@
+{
+    "channels": [{
+        "pin": 11,
+        "type": "pwm",
+        "enabled": true,
+        "params": {
+            "frequency": 100
+        }
+    },{
+        "pin": 13,
+        "type": "pwm",
+        "enabled": true,
+        "params": {
+            "frequency": 100
+        }
+    },{
+        "pin": 15,
+        "type": "pwm",
+        "enabled": true,
+        "params": {
+            "frequency": 100
+        }
+    }],
+    "logger": {
+        "disable_existing_loggers": false,
+        "formatters": {
+            "standard": {
+                "format": "%(asctime)s - %(levelname)s - %(name)s: %(message)s"
+            }
+        },
+        "handlers": {
+            "console": {
+                "class": "logging.StreamHandler",
+                "formatter": "standard",
+                "level": "DEBUG"
+            }
+        },
+        "loggers": {
+            "rpi_gpio_http": {
+                "handlers": [
+                    "console"
+                ],
+                "level": "DEBUG",
+                "propagate": true
+            }
+        },
+        "version": 1
+    }
+}
