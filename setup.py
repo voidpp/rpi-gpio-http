@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = "rpi-gpio-http",
-    desciption = "HTTP interface for Raspberry Pi GPIO",
+    description = "HTTP interface for Raspberry Pi GPIO",
     version = "1.0.0",
     author = 'Lajos Santa',
     author_email = 'santa.lajos@coldline.hu',
