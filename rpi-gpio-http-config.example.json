@@ -1,18 +1,15 @@
 {
     "channels": [{
         "pin": 11,
-        "type": "pwm",
+        "type": "input",
         "enabled": true,
         "params": {
-            "frequency": 100
+            "pull": "up"
         }
     },{
         "pin": 13,
-        "type": "pwm",
-        "enabled": true,
-        "params": {
-            "frequency": 100
-        }
+        "type": "output",
+        "enabled": true
     },{
         "pin": 15,
         "type": "pwm",
