@@ -28,3 +28,9 @@ Type config:
 + **pwm**: frequency: in Hz
 
 *Note: pin numbers is the physical number in the board*
+
+Install
+-------
+``pip install rpi-gpio-http``
+
+Do not use the ``run-dev-server.py`` in 'production', instead of this use `uWSGI <https://uwsgi-docs.readthedocs.org/en/latest/>`_, or sg else.
