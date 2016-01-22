@@ -15,6 +15,7 @@ logger.info("Config loaded from %s" % config_loader.filename)
 
 channels = {}
 
+GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 
 for ch in config['channels']:
