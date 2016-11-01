@@ -48,9 +48,11 @@ class InputChannel(Channel):
         raise ChannelException(self, "Cannot set value for input!")
 
 class OutputChannel(Channel):
-    initial_mapping = {
+    value_map = {
         True: GPIO.HIGH,
-        False: GPIO.LOW
+        False: GPIO.LOW,
+        1: GPIO.HIGH,
+        0: GPIO.LOW
     }
 
     def __init__(self, pin, initial=True):
@@ -59,7 +61,14 @@ class OutputChannel(Channel):
         if initial not in (True, False):
             initial = True
 
-        GPIO.setup(pin, GPIO.OUT, initial=OutputChannel.initial_mapping[initial])
+        GPIO.setup(pin, GPIO.OUT, initial=OutputChannel.value_map[initial])
+
+    def set_value(self, value):
+        if value not in value_map:
+            raise ChannelException(self, "Cannot set value"
+                                   " = '%s' (choices are in %s)",
+                                   value, value_map.keys())
+        GPIO.output(self.pin, OutputChannel.value_map[value])
 
 class PWMChannel(OutputChannel):
     def __init__(self, pin, frequency):
