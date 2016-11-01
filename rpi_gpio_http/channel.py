@@ -64,7 +64,7 @@ class OutputChannel(Channel):
         GPIO.setup(pin, GPIO.OUT, initial=OutputChannel.value_map[initial])
 
     def set_value(self, value):
-        if value not in value_map:
+        if value not in OutputChannel.value_map:
             raise ChannelException(self, "Cannot set value"
                                    " = '%s' (choices are in %s)",
                                    value, value_map.keys())
