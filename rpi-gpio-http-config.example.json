@@ -9,7 +9,10 @@
     },{
         "pin": 13,
         "type": "output",
-        "enabled": true
+        "enabled": true,
+        "params": {
+          "initial": 
+        }
     },{
         "pin": 15,
         "type": "pwm",
