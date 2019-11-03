@@ -8,7 +8,7 @@ setup(
     author_email = 'santa.lajos@coldline.hu',
     url = 'https://github.com/voidpp/rpi-gpio-http.git',
     install_requires = [
-        "Flask==0.10.1",
+        "Flask==1.0",
         "querystring-parser==1.2.3",
         "RPi.GPIO==0.6.1",
         "voidpp-tools==1.5.0",
